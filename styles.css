@@ -1,0 +1,8 @@
+/* Imports from Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+
+:root {
+  --ibm-mono: "IBM Plex Mono", monospace;
+  --ibm-sans: "IBM Plex Sans", sans-serif;
+}
