@@ -5,4 +5,142 @@
 :root {
   --ibm-mono: "IBM Plex Mono", monospace;
   --ibm-sans: "IBM Plex Sans", sans-serif;
+  --dark: #060a24;
+  --light: #ffffff;
+  --blue: #0000ec;
+  --aquamarine: #00f3bb;
+  --grey: rgba(6,10,36,0.56);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+.site-header {
+  height: 44px;
+  position: sticky;
+  top: 0;
+  padding: 0px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-button {
+  width: 18px;
+  height: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-line {
+  height: 2px;
+  background-color: var(--dark);
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+
+.nav-mobile {
+  width: 100%;
+  position: absolute;
+  top: 44px;
+  margin-left: -16px;
+  padding: 16px 0px 0px 16px;
+  background-color: var(--blue);
+  clip-path: circle(0% at 100% 0%);
+  transition: clip-path 0.3s ease;
+}
+
+.menu-list {
+  list-style: none;
+}
+
+.menu-list li {
+  margin-bottom: 24px;
+}
+
+.menu-list a {
+  text-decoration: none;
+  font-family: var(--ibm-mono);
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  color: var(--light);
+}
+
+#menu-checkbox {
+  display: none;
+}
+
+#menu-checkbox:checked ~ .nav-mobile {
+  clip-path: circle(100%);
+}
+
+#menu-checkbox:checked + .label-checkbox .line-center {
+  opacity: 0;
+}
+
+#menu-checkbox:checked + .label-checkbox .line-top {
+  transform: translateY(5px) rotate(-45deg);
+}
+
+#menu-checkbox:checked + .label-checkbox .line-bottom {
+  transform: translateY(-5px) rotate(45deg);
+}
+
+@media only screen and (min-width: 1024px) {
+  .site-header {
+    height: 80px;
+    padding: 0px 100px;
+  }
+
+  .site-logo {
+    width: 36px;
+  }
+
+  .label-checkbox {
+    display: none;
+  }
+
+  .nav-mobile {
+    width: auto;
+    position: static;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    clip-path: none;
+    transition: none;
+  }
+
+  .menu-list {
+    display: flex;
+  }
+
+  .menu-list li {
+    margin-bottom: 0;
+    margin-left: 48px;
+  }
+
+  .menu-list a {
+    color: var(--dark);
+  }
+
+  .menu-list a:hover {
+    color: var(--aquamarine);
+    text-decoration: line-through;
+    font-weight: 500;
+  }
+
+  .menu-list a:active {
+    color: var(--grey);
+    text-decoration: line-through;
+    font-weight: 400;
+  }
 }
