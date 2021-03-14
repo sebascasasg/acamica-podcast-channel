@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
 
+/*? (1). Variables */
 :root {
   --ibm-mono: "IBM Plex Mono", monospace;
   --ibm-sans: "IBM Plex Sans", sans-serif;
@@ -9,24 +10,102 @@
   --light: #ffffff;
   --blue: #0000ec;
   --aquamarine: #00f3bb;
-  --grey: rgba(6,10,36,0.56);
+  --grey: rgba(6, 10, 36, 0.56);
+  --content-padding: 5%;
 }
+/*?---------------------------*/
 
+/*? (2). General styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/*Blocks*/
 body {
-  overflow: hidden;
+  background: var(--light);
+  overflow-x: hidden;
 }
 
+.general-button {
+  font-family: var(--ibm-mono);
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  width: 100%;
+  max-width: 400px;
+  padding: 13px 0px;
+  background: var(--aquamarine);
+  border: none;
+  color: var(--dark);
+}
+
+.general-button:hover {
+  background: linear-gradient(225deg, #0000fe 0%, #00f0b8 100%);
+  color: var(--light);
+  cursor: pointer;
+}
+
+.general-button:focus {
+  outline: none;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: auto;
+  position: relative;
+}
+
+/*Elements*/
+.site-title,
+.section-title {
+  font-family: var(--ibm-sans);
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.paragraph-text {
+  font-family: var(--ibm-mono);
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/*Modifiers*/
+.is-darkness {
+  color: var(--dark);
+}
+
+.is-light {
+  color: var(--light);
+}
+
+.is-blue {
+  color: var(--blue);
+}
+/*?---------------------------*/
+
+/*? (3). Site header styles */
 .site-header {
   height: 44px;
   position: sticky;
   top: 0;
-  padding: 0px 16px;
+  padding: 0% var(--content-padding);
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--light);
+  z-index: 100;
+}
+
+.navigation-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,12 +126,12 @@ body {
   transition: all 0.3s ease;
 }
 
-.nav-mobile {
+.nav-menu {
   width: 100%;
   position: absolute;
   top: 44px;
-  margin-left: -16px;
-  padding: 16px 0px 0px 16px;
+  margin-left: -5%;
+  padding: 16px 0px 0px 5%;
   background-color: var(--blue);
   clip-path: circle(0% at 100% 0%);
   transition: clip-path 0.3s ease;
@@ -79,7 +158,7 @@ body {
   display: none;
 }
 
-#menu-checkbox:checked ~ .nav-mobile {
+#menu-checkbox:checked ~ .nav-menu {
   clip-path: circle(100%);
 }
 
@@ -94,11 +173,131 @@ body {
 #menu-checkbox:checked + .label-checkbox .line-bottom {
   transform: translateY(-5px) rotate(45deg);
 }
+/*?---------------------------*/
+
+/**? (4). Page content styles **/
+/*-- Header section styles --*/
+.intro-section {
+  margin-bottom: 24px;
+}
+
+.intro-section .content-container {
+  padding: 0% var(--content-padding);
+}
+
+.site-title {
+  margin-bottom: 16px;
+  max-width: 250px;
+}
+
+.inserted-text {
+  text-decoration: none;
+}
+
+.intro-section .paragraph-text {
+  margin-bottom: 36px;
+}
+
+/*-- Episodes section styles --*/
+.episodes-section {
+  position: relative;
+}
+
+.episodes-section .content-container {
+  padding: 20% var(--content-padding) 0px;
+}
+
+.episodes-section .section-title {
+  margin-bottom: 21px;
+}
+
+.clipped-container {
+  height: 100%;
+  background: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  clip-path: polygon(0% 3%, 100% 0%, 100% 97%, 0% 100%);
+}
+
+.episodes-container {
+  max-width: 1240px;
+  margin: auto;
+  padding: 0% var(--content-padding) 170px;
+}
+
+.episode-frame {
+  margin-bottom: 10px;
+}
+
+/*-- AboutUs section styles --*/
+.about-section {
+  margin-bottom: 54px;
+  margin-top: -120px;
+}
+
+.about-section .content-container {
+  padding: 0% var(--content-padding);
+}
+
+.cellphone-image {
+  width: 100%;
+}
+
+.about-section .text-container {
+  padding-top: 27px;
+}
+
+.about-section .section-title {
+  margin-bottom: 8px;
+}
+
+/*-- Guests section styles --*/
+.guests-section .content-container {
+  padding: 0% var(--content-padding);
+}
+
+.guests-section .section-title {
+  margin-bottom: 14px;
+}
+
+.images-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.guest-img {
+  width: 100%;
+}
+
+/*?---------------------------*/
 
 @media only screen and (min-width: 1024px) {
+  /*-- General styles --*/
+  .general-button {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 16px 0px;
+  }
+
+  .site-title {
+    max-width: 100%;
+    font-size: 64px;
+    line-height: 84px;
+  }
+
+  .section-title {
+    font-size: 48px;
+    line-height: 62px;
+  }
+
+  .paragraph-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  /*---------------------------*/
+
+  /*-- Site header styles (Mobile) --*/
   .site-header {
     height: 80px;
-    padding: 0px 100px;
+    margin-bottom: 120px;
   }
 
   .site-logo {
@@ -109,7 +308,7 @@ body {
     display: none;
   }
 
-  .nav-mobile {
+  .nav-menu {
     width: auto;
     position: static;
     margin: 0;
@@ -143,4 +342,102 @@ body {
     text-decoration: line-through;
     font-weight: 400;
   }
+  /*---------------------------*/
+
+  /*-- Page content styles --*/
+
+  /* Header Section styles */
+  .intro-section {
+    margin-bottom: 5px;
+  }
+
+  .site-title {
+    margin-bottom: 0px;
+  }
+
+  .intro-section .content-container {
+    padding: 0% 8%;
+  }
+
+  .intro-section .paragraph-text {
+    width: 630px;
+    margin-bottom: 56px;
+  }
+
+  .intro-section .general-button {
+    width: 226px;
+  }
+
+  /*-- Episodes section styles --*/
+  .episodes-section {
+    height: 1000px;
+  }
+
+  .episodes-section .content-container {
+    padding: 135px 8% 0px 8%;
+  }
+
+  .episodes-section .section-title {
+    margin-bottom: 26px;
+  }
+
+  .clipped-container {
+    clip-path: polygon(0% 100px, 100% 0%, 100% 900px, 0% 100%);
+  }
+
+  .episodes-container {
+    padding-bottom: 135px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .episodes-container .episode-frame:nth-child(2n + 1) {
+    margin-right: 6%;
+  }
+
+  .episode-frame {
+    margin-bottom: 72px;
+    width: 47%;
+  }
+
+  /*-- AboutUs section styles --*/
+  .about-section {
+    margin-top: -170px;
+    margin-bottom: 64px;
+  }
+
+  .about-section .content-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .cellphone-image {
+    width: 458px;
+  }
+  .about-section .text-container {
+    width: 464px;
+    padding-top: 0;
+  }
+
+  /*-- Guests section styles --*/
+  .guests-section .content-container {
+    padding: 0% 8%;
+  }
+
+  .guests-section .section-title {
+    margin-bottom: 36px;
+  }
+
+  .images-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .guest-img {
+    width: 33.3%;
+    flex-grow: 1;
+  }
+
+  /*---------------------------*/
 }

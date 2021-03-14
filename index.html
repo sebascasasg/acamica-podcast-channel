@@ -9,28 +9,151 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="shortcut icon" href="/images/favicon.ico" />
-
     <link rel="stylesheet" href="styles.css" />
-    <title>blue dot</title>
+    <title>blue dot.</title>
   </head>
   <body>
     <header class="site-header">
-      <img src="./images/logo.svg" alt="bluedot logo" class="site-logo" />
-      <input type="checkbox" id="menu-checkbox">
-      <label for="menu-checkbox" class="label-checkbox">
-        <div class="menu-button">
-          <div class="menu-line line-top"></div>
-          <div class="menu-line line-center"></div>
-          <div class="menu-line line-bottom"></div></div
-      ></label>
-      <nav class="nav-mobile">
-        <ul class="menu-list">
-          <li><a href="#">EPISODIOS</a></li>
-          <li><a href="#">NOSOTROS</a></li>
-          <li><a href="#">ENTREVISTAS</a></li>
-          <li><a href="#">TÓPICOS</a></li>
-        </ul>
-      </nav>
+      <div class="navigation-container">
+        <img src="./images/logo.svg" alt="bluedot logo" class="site-logo" />
+        <input type="checkbox" id="menu-checkbox" />
+        <label for="menu-checkbox" class="label-checkbox">
+          <div class="menu-button">
+            <div class="menu-line line-top"></div>
+            <div class="menu-line line-center"></div>
+            <div class="menu-line line-bottom"></div></div
+        ></label>
+        <nav class="nav-menu">
+          <ul class="menu-list">
+            <li><a href="#">EPISODIOS</a></li>
+            <li><a href="#">NOSOTROS</a></li>
+            <li><a href="#">ENTREVISTAS</a></li>
+            <li><a href="#">TÓPICOS</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
+
+    <article class="page-content">
+      <header class="intro-section">
+        <div class="content-container">
+          <h1 class="site-title is-dark">
+            Hello <del>world</del> <ins class="inserted-text">pale blue dot</ins
+            ><span class="is-blue">.</span>
+          </h1>
+          <p class="paragraph-text is-dark">
+            El portal de podcasts que explora el mundo de la programación y la
+            tecnología. Nuevos episodios, todos los jueves cada 15 días.
+          </p>
+          <button class="general-button">CONOCÉ MÁS</button>
+        </div>
+      </header>
+      <section class="episodes-section">
+        <div class="clipped-container">
+          <div class="content-container">
+            <h2 class="section-title is-light">Episodios</h2>
+          </div>
+          <div class="episodes-container">
+            <iframe
+              class="episode-frame"
+              src="https://open.spotify.com/embed-podcast/episode/2PSacIuV7FY0G4o3Yex1Zi"
+              width="100%"
+              height="232"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
+            <iframe
+              class="episode-frame"
+              src="https://open.spotify.com/embed-podcast/episode/59PXOfe6zrEOky2fcl0cqH"
+              width="100%"
+              height="232"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
+            <iframe
+              class="episode-frame"
+              src="https://open.spotify.com/embed-podcast/episode/47x2W9UkxbTBostmFP1YHn"
+              width="100%"
+              height="232"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
+            <iframe
+              class="episode-frame"
+              src="https://open.spotify.com/embed-podcast/episode/1rooiCFQ4u5OYGjYNM3iqi"
+              width="100%"
+              height="232"
+              frameborder="0"
+              allowtransparency="true"
+              allow="encrypted-media"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <section class="about-section">
+        <div class="content-container">
+          <img
+            src="./images/phone.png"
+            alt="iPhone showing content on screen"
+            class="cellphone-image"
+          />
+          <div class="text-container">
+            <h2 class="section-title">De dónde venimos</h2>
+            <p class="paragraph-text">
+              Our posturings, our imagined self-importance, the delusion that we
+              have some privileged position in the Universe, are challenged by
+              this point of pale light. <br /><br />
+              Our planet is a lonely speck in the great enveloping cosmic dark.
+              In our obscurity, in all this vastness, there is no hint that help
+              will come from elsewhere to save us from ourselves.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="guests-section">
+        <div class="content-container">
+          <h2 class="section-title">Invitadas/os estelares</h2>
+        </div>
+        <div class="images-grid">
+          <img
+            src="./images/grace-hopper.jpg"
+            alt="Grace Hopper"
+            class="guest-img"
+          />
+          <img
+            src="./images/katie-bouman.jpg"
+            alt="Katie Bouman"
+            class="guest-img"
+          />
+          <img
+            src="./images/margaret-hamilton.jpg"
+            alt="Margaret Hamilton"
+            class="guest-img"
+          />
+          <img
+            src="./images/era-computer.jpg"
+            alt="ERA Computer"
+            class="guest-img"
+          />
+          <img
+            src="./images/computers-operators.jpg"
+            alt="Computers operators"
+            class="guest-img"
+          />
+          <img
+            src="./images/susan-kare.jpg"
+            alt="Susan Kare"
+            class="guest-img"
+          />
+        </div>
+      </section>
+      <section></section>
+      <section></section>
+    </article>
+
+    <footer></footer>
   </body>
 </html>
