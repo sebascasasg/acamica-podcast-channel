@@ -15,7 +15,9 @@
   <body>
     <header class="site-header">
       <div class="navigation-container">
-        <img src="./images/logo.svg" alt="bluedot logo" class="site-logo" />
+        <a href="https://bluedot.vercel.app/"
+          ><img src="./images/logo.svg" alt="bluedot logo" class="site-logo"
+        /></a>
         <input type="checkbox" id="menu-checkbox" />
         <label for="menu-checkbox" class="label-checkbox">
           <div class="menu-button">
@@ -25,10 +27,10 @@
         ></label>
         <nav class="nav-menu">
           <ul class="menu-list">
-            <li><a href="#">EPISODIOS</a></li>
-            <li><a href="#">NOSOTROS</a></li>
-            <li><a href="#">ENTREVISTAS</a></li>
-            <li><a href="#">TÓPICOS</a></li>
+            <li><a href="#episodios">EPISODIOS</a></li>
+            <li><a href="#nosotros">NOSOTROS</a></li>
+            <li><a href="#entrevistas">ENTREVISTAS</a></li>
+            <li><a href="#topicos">TÓPICOS</a></li>
           </ul>
         </nav>
       </div>
@@ -45,10 +47,10 @@
             El portal de podcasts que explora el mundo de la programación y la
             tecnología. Nuevos episodios, todos los jueves cada 15 días.
           </p>
-          <button class="general-button">CONOCÉ MÁS</button>
+          <a href="#nosotros" class="general-button">CONOCÉ MÁS</a>
         </div>
       </header>
-      <section class="episodes-section">
+      <section class="episodes-section" id="episodios">
         <div class="clipped-container">
           <div class="content-container">
             <h2 class="section-title is-light">Episodios</h2>
@@ -93,7 +95,7 @@
           </div>
         </div>
       </section>
-      <section class="about-section">
+      <section class="about-section" id="nosotros">
         <div class="content-container">
           <img
             src="./images/phone.png"
@@ -113,7 +115,7 @@
           </div>
         </div>
       </section>
-      <section class="guests-section">
+      <section class="guests-section" id="entrevistas">
         <div class="content-container">
           <h2 class="section-title">Invitadas/os estelares</h2>
         </div>
@@ -150,34 +152,68 @@
           />
         </div>
       </section>
-      <section class="topics-section">
+      <section class="topics-section" id="topicos">
         <div class="content-container">
-          <h2 class="section-title">
-            Algunos de nuestros temas
-          </h2>
+          <h2 class="section-title">Algunos de nuestros temas</h2>
           <div class="topics-group">
             <div class="topic-container">
-              <img src="./images/remote-work.svg" alt="Remote work" class="topic-img">
+              <img
+                src="./images/remote-work.svg"
+                alt="Remote work"
+                class="topic-img"
+              />
               <p class="topic-text">Trabajo remoto</p>
             </div>
             <div class="topic-container">
-              <img src="./images/rethink-programming.svg" alt="Rethink programming" class="topic-img">
+              <img
+                src="./images/rethink-programming.svg"
+                alt="Rethink programming"
+                class="topic-img"
+              />
               <p class="topic-text">Repensando la programación</p>
             </div>
             <div class="topic-container">
-              <img src="./images/coding-basis.svg" alt="Coding basis" class="topic-img">
+              <img
+                src="./images/coding-basis.svg"
+                alt="Coding basis"
+                class="topic-img"
+              />
               <p class="topic-text">Bases del código</p>
             </div>
             <div class="topic-container">
-              <img src="./images/informatic-security.svg" alt="Informatic security" class="topic-img">
+              <img
+                src="./images/informatic-security.svg"
+                alt="Informatic security"
+                class="topic-img"
+              />
               <p class="topic-text">Seguridad informática</p>
             </div>
           </div>
         </div>
       </section>
-      <section></section>
     </article>
 
-    <footer></footer>
+    <footer>
+      <div class="news-section">
+        <div class="content-container">
+          <h2 class="section-title">¿Querés las últimas novedades?</h2>
+          <a href="#episodios" class="general-button">ESCUCHÁ LOS EPISODIOS</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <div class="content-container">
+          <div class="copyright-container">
+            <p class="paragraph-text">© 2021— Hello blue pale dot</p>
+          </div>
+          <div class="social-container">
+            <a href="https://open.spotify.com/show/1Et8hZk1DwKw6PtBFGpwSD?si=9Q0ajQDATQuQE2dxF1-H3Q" target="_blank"><i class="fa fa-spotify" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/acamica/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/Acamica_com" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/Acamica.org/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href="https://telegram.org/" target="_blank"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

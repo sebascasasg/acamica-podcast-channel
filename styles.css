@@ -23,6 +23,10 @@
 }
 
 /*Blocks*/
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--light);
   overflow-x: hidden;
@@ -39,6 +43,9 @@ body {
   background: var(--aquamarine);
   border: none;
   color: var(--dark);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .general-button:hover {
@@ -63,14 +70,14 @@ body {
 .section-title {
   font-family: var(--ibm-sans);
   font-size: 36px;
-  line-height: 1.2;
+  line-height: 42px;
   font-weight: 400;
 }
 
 .paragraph-text {
   font-family: var(--ibm-mono);
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 22px;
   font-weight: 400;
 }
 
@@ -132,7 +139,7 @@ body {
   top: 44px;
   margin-left: -5%;
   padding: 16px 0px 0px 5%;
-  background-color: var(--blue);
+  background: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
   clip-path: circle(0% at 100% 0%);
   transition: clip-path 0.3s ease;
 }
@@ -311,8 +318,63 @@ body {
 }
 /*?---------------------------*/
 
+/**? (5). Site footer styles **/
+/*-- News section styles --*/
+.news-section {
+  padding: 64px 0px;
+  background: linear-gradient(225deg, #0000ff 0%, #0000a3 100%);
+  clip-path: polygon(0% 35px, 100% 0%, 100% 100%, 0% 100%);
+}
+.news-section .content-container {
+  padding: 0% var(--content-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.news-section .section-title {
+  color: var(--light);
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+/*-- Footer section styles --*/
+.footer-section .content-container {
+  padding: 24px 0px 31px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.copyright-container {
+  margin-bottom: 16px;
+  width: 227px;
+}
+
+.copyright-container .paragraph-text {
+  text-align: center;
+}
+
+.social-container {
+  width: 227px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-container .fa {
+  color: var(--dark);
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.social-container .fa:hover {
+  color: var(--blue);
+}
+
+/*?---------------------------*/
+
 @media only screen and (min-width: 1024px) {
-  /*-- General styles --*/
+  /**-- General styles --**/
   .general-button {
     font-size: 18px;
     line-height: 24px;
@@ -336,7 +398,7 @@ body {
   }
   /*---------------------------*/
 
-  /*-- Site header styles (Mobile) --*/
+  /**-- Site header styles --**/
   .site-header {
     height: 80px;
     margin-bottom: 120px;
@@ -355,7 +417,7 @@ body {
     position: static;
     margin: 0;
     padding: 0;
-    background-color: transparent;
+    background: unset;
     clip-path: none;
     transition: none;
   }
@@ -386,7 +448,7 @@ body {
   }
   /*---------------------------*/
 
-  /*-- Page content styles --*/
+  /**-- Page content styles --**/
 
   /* Header Section styles */
   .intro-section {
@@ -506,6 +568,38 @@ body {
     justify-content: flex-start;
     margin-bottom: 0;
   }
+  /*---------------------------*/
 
+  /**-- Site footer styles --**/
+
+  /*-- News section styles --*/
+  .news-section {
+    padding: 213px 0px 150px;
+    clip-path: polygon(0% 100px, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .news-section .general-button {
+    width: 345px;
+  }
+
+  /*-- Footer section styles --*/
+  .footer-section {
+    padding: 0 8%;
+  }
+
+  .footer-section .content-container {
+    padding-top: 36px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .copyright-container {
+    width: 270px;
+    margin-bottom: 0;
+  }
+
+  .social-container {
+    width: 220px;
+  }
   /*---------------------------*/
 }
